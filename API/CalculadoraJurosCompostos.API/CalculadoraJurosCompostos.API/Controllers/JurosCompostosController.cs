@@ -18,21 +18,6 @@ namespace CalculadoraJurosCompostos.API.Controllers
         [HttpGet]
         public ActionResult<double> CalcularJurosCompostos(double valorInicial, double taxaJuros, int numeroPeriodos)
         {
-            if (valorInicial <= 0)
-            {
-                return BadRequest("O valor inicial deve ser maior que zero.");
-            }
-
-            if (taxaJuros <= 0)
-            {
-                return BadRequest("A taxa de juros deve ser maior que zero.");
-            }
-
-            if (numeroPeriodos <= 0)
-            {
-                return BadRequest("O número de períodos deve ser maior que zero.");
-            }
-
             double valorComJuros = _jurosCompostosService.CalcularJurosCompostos(valorInicial, taxaJuros, numeroPeriodos);
             return Ok(valorComJuros);
         }
