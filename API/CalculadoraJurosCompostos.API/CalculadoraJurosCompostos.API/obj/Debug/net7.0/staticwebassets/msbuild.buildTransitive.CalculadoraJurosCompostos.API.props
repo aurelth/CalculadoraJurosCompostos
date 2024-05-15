@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\CalculadoraJurosCompostos.API.props" />
+</Project>

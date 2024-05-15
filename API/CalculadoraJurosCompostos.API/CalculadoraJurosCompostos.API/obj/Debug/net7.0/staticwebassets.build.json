@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "8IIDjadbsWMh5l3xSQLVXrLahsxxAesK1rCUuPUxwZw=",
+  "Source": "CalculadoraJurosCompostos.API",
+  "BasePath": "_content/CalculadoraJurosCompostos.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

@@ -1,3 +1,6 @@
+using CalculadoraJurosCompostos.API.Service;
+using CalculadoraJurosCompostos.API.Service.IService;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -6,6 +9,7 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddScoped<IJurosCompostosService, JurosCompostosService>();
 
 var app = builder.Build();
 
