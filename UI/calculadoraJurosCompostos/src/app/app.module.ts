@@ -5,11 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CalculadoraJcComponent } from './components/calculadora-jc/calculadora-jc.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { CalculadoraComponent } from './calculadora/calculadora.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CalculadoraJcComponent
+    CalculadoraJcComponent,
+    CalculadoraComponent
   ],
   imports: [
     BrowserModule,
