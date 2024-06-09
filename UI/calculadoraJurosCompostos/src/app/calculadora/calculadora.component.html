@@ -1,1 +1,23 @@
-<p>calculadora works!</p>
+
+<div>
+  <h2>Calculadora de Juros Compostos</h2>
+  <div>
+    <label for="valorAplicado">Valor Aplicado:</label>
+    <input type="number" id="valorAplicado" [(ngModel)]="valorAplicado">
+  </div>
+  <div>
+    <label for="taxaJuros">Taxa de Juros (%):</label>
+    <input type="number" id="taxaJuros" [(ngModel)]="taxaJuros">
+  </div>
+  <div>
+    <label for="numeroPeriodos">Número de Períodos:</label>
+    <input type="number" id="numeroPeriodos" [(ngModel)]="numeroPeriodos">
+  </div>
+  <button (click)="calcular()">Calcular</button>
+  <div *ngIf="valorFuturo !== null">
+    <h3>Valor Futuro: {{ valorFuturo }}</h3>
+  </div>
+  <div *ngIf="error !== null" style="color: red;">
+    <h3>Erro: {{ error }}</h3>
+  </div>
+</div>
