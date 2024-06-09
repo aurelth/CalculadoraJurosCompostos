@@ -1,0 +1,29 @@
+<div class="container mt-5">
+  <form [formGroup]="numberForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="number1">Valor Inicial</label>
+      <input type="number" id="number1" formControlName="number1" class="form-control" />
+      <div *ngIf="numberForm.controls['number1'].invalid && numberForm.controls['number1'].touched" class="text-danger">
+        Number 1 is required and must be non-negative.
+      </div>
+    </div>
+
+    <div class="form-group mt-3">
+      <label for="number2">Taxa de Juros</label>
+      <input type="number" id="number2" formControlName="number2" class="form-control" />
+      <div *ngIf="numberForm.controls['number2'].invalid && numberForm.controls['number2'].touched" class="text-danger">
+        Number 2 is required and must be non-negative.
+      </div>
+    </div>
+
+    <div class="form-group mt-3">
+      <label for="number3">Período de Investimento</label>
+      <input type="number" id="number3" formControlName="number3" class="form-control" />
+      <div *ngIf="numberForm.controls['number3'].invalid && numberForm.controls['number3'].touched" class="text-danger">
+        Number 3 is required and must be non-negative.
+      </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary mt-2">Submit</button>
+  </form>
+</div>
