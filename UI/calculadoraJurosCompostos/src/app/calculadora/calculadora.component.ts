@@ -8,7 +8,7 @@ import { JurosCompostosService } from 'src/services/juros-compostos-service.serv
   templateUrl: './calculadora.component.html',
   styleUrls: ['./calculadora.component.css']
 })
-export class CalculadoraComponent implements OnInit {
+export class CalculadoraComponent {
   valorAplicado: number = 0;
   taxaJuros: number = 0;
   numeroPeriodos: number = 0;
@@ -16,9 +16,6 @@ export class CalculadoraComponent implements OnInit {
   error: string | null = null;
 
   constructor(private jurosCompostosService: JurosCompostosService) { }
-  ngOnInit(): void {
-    throw new Error('Method not implemented.');
-  }
 
   calcular() {
     this.jurosCompostosService.calcularJurosCompostos(this.valorAplicado, this.taxaJuros, this.numeroPeriodos)

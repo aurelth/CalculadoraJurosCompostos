@@ -12,6 +12,6 @@ export class JurosCompostosService {
   constructor(private http: HttpClient) { }
 
   calcularJurosCompostos(valorAplicado: number, taxaJuros: number, numeroPeriodos: number): Observable<number> {
-    return this.http.get<number>(`${environment.apiUrl}/calcularjuroscompostos?valorAplicado=${valorAplicado}&taxaJuros=${taxaJuros}&numeroPeriodos=${numeroPeriodos}`);
+    return this.http.get<number>(`${environment.apiUrl}/api/JurosCompostos?valorAplicado=${valorAplicado}&taxaJuros=${taxaJuros}&numeroPeriodos=${numeroPeriodos}`);
   }
 }

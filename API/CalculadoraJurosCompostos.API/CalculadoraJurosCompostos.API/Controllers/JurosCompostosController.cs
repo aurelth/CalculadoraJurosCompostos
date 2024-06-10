@@ -16,9 +16,9 @@ namespace CalculadoraJurosCompostos.API.Controllers
         }
 
         [HttpGet]
-        public ActionResult<double> CalcularJurosCompostos(double valorInicial, double taxaJuros, int numeroPeriodos)
+        public ActionResult<double> CalcularJurosCompostos(double valorAplicado, double taxaJuros, int numeroPeriodos)
         {
-            double valorFuturo = _jurosCompostosService.CalcularJurosCompostos(valorInicial, taxaJuros, numeroPeriodos);
+            double valorFuturo = _jurosCompostosService.CalcularJurosCompostos(valorAplicado, taxaJuros, numeroPeriodos);
             return Ok(valorFuturo);
         }
     }
