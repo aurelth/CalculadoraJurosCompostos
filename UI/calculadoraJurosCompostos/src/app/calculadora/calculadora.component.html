@@ -1,21 +1,21 @@
-
-<div>
-  <h2>Calculadora de Juros Compostos</h2>
-  <div>
-    <label for="valorAplicado">Valor Aplicado:</label>
-    <input type="number" id="valorAplicado" [(ngModel)]="valorAplicado">
+<div class="container">
+  <h2 class="mt-2">Calculadora De Juros Compostos</h2>
+  <div class="mt-3">
+    <label class="form-label">Valor Aplicado:</label>
+    <input type="number" id="valorAplicado" class="form-control" name="valorAplicado" [(ngModel)]="valorAplicado">
   </div>
-  <div>
+  <div class="mt-3">
     <label for="taxaJuros">Taxa de Juros (%):</label>
-    <input type="number" id="taxaJuros" [(ngModel)]="taxaJuros">
+    <input type="number" id="taxaJuros" class="form-control" name="taxaJuros" [(ngModel)]="taxaJuros">
   </div>
-  <div>
+  <div class="mt-3 mb-4">
     <label for="numeroPeriodos">Número de Períodos:</label>
-    <input type="number" id="numeroPeriodos" [(ngModel)]="numeroPeriodos">
+    <input type="number" id="numeroPeriodos" class="form-control" name="numeroPeriodos" [(ngModel)]="numeroPeriodos">
   </div>
-  <button (click)="calcular()">Calcular</button>
-  <div *ngIf="valorFuturo !== null">
-    <h3>Valor Futuro: {{ valorFuturo }}</h3>
+  <button type="submit" class="btn btn-primary" (click)="calcular()">Calcular</button>
+  <div *ngIf="valorFuturo !== null" class="mt-5">
+    <label class="form-label">Valor Futuro</label>
+    <input type="text" disabled name="valorFuturo" id="valorFuturo" class="form-control" style="background-color:tomato;" value="{{valorFuturo}}">
   </div>
   <div *ngIf="error !== null" style="color: red;">
     <h3>Erro: {{ error }}</h3>
